@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clinvet", "clinvet\clinvet.csproj", "{FA843F4C-E969-44FD-8168-0926A62B79A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clinvet.Tests", "clinvet.Tests\clinvet.Tests.csproj", "{00F32B80-0E22-4D46-9A5A-0B11364BC71C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA843F4C-E969-44FD-8168-0926A62B79A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA843F4C-E969-44FD-8168-0926A62B79A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA843F4C-E969-44FD-8168-0926A62B79A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA843F4C-E969-44FD-8168-0926A62B79A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00F32B80-0E22-4D46-9A5A-0B11364BC71C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00F32B80-0E22-4D46-9A5A-0B11364BC71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00F32B80-0E22-4D46-9A5A-0B11364BC71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00F32B80-0E22-4D46-9A5A-0B11364BC71C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABD1071A-C090-4CDB-A38F-52DA0E1B4A85}
+	EndGlobalSection
+EndGlobal
