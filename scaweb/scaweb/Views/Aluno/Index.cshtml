@@ -1,0 +1,67 @@
+﻿@model List<scaweb.Models.Aluno>
+
+@{
+    ViewBag.Title = "Cadastro de Aluno";
+}
+
+<div class="panel panel-info">
+    <div class="panel-heading">Alunos</div>
+    <div class="panel-body">
+        <a href="@Url.Action("Create", "Aluno")"
+           class="btn btn-default btn-info btn-sm">
+            <span class="glyphicon glyphicon-plus"></span> Novo
+        </a>
+    </div>
+    <table class="table table-responsive table-striped table-bordered table-hover table-condensed table-wrapper">
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>Data de Nascimento</th>
+            <th>E-mail</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+            <th>Identidade</th>
+            <th>Matricula</th>
+            <th>Ano de Inicio</th>
+            <th>Semestre de Inicio</th>
+            <th>Ações</th>
+
+        </tr>
+        @if (Model != null) {
+            foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Id)</td>
+            <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+            <td>@Html.DisplayFor(modelItem => item.Cpf)</td>
+            <td>@Html.DisplayFor(modelItem => item.DataNascimento)</td>
+            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+            <td>@Html.DisplayFor(modelItem => item.Endereco)</td>
+            <td>@Html.DisplayFor(modelItem => item.Telefone)</td>
+            <td>@Html.DisplayFor(modelItem => item.Identidade)</td>
+            <td>@Html.DisplayFor(modelItem => item.Matricula)</td>
+            <td>@Html.DisplayFor(modelItem => item.AnoInicio)</td>
+            <td>@Html.DisplayFor(modelItem => item.SemestreInicio)</td>
+            <td>
+                <div class="btn-group btn-group-xs">
+                    @Html.ActionLink("Editar", "Edit",
+new { id = item.Id },
+new { @class = "btn btn-info btn-xs" })
+
+                    @Html.ActionLink("Visualizar", "Details",
+new { id = item.Id },
+new { @class = "btn btn-info btn-xs" })
+
+                    @Html.ActionLink("Excluir", "Delete",
+new { id = item.Id },
+new { @class = "btn btn-info btn-xs" })
+                </div>
+            </td>
+        </tr>
+            }
+        }
+    </table>
+</div>
+
+
+

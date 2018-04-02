@@ -1,0 +1,29 @@
+﻿@model scaweb.Models.Curso
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="row col-sm-6">
+    <div class="panel panel-info">
+        <div class="panel-heading">Exclusão da Curso</div>
+        <p></p>
+        @using (Html.BeginForm("Delete", "Curso", FormMethod.Post, new { @class = "form-horizontal", @role = "form" })) {
+        <div class="panel panel-body">
+            <div class="form-group">
+                <label for="Descricao" class="col-sm-2 control-label">Descrição: </label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="Descricao" id="Descricao" value="@Model.Descricao" disabled>
+                </div>
+            </div>
+        </div>
+            <div class=" panel-footer">
+                    <div class="btn-group btn-group-sm col-lg-offset-7">
+                        <input type="submit" value="Excluir" class="btn btn-info btn-sm" />
+                        <a href="@Url.Action("Index", "Curso")" class="btn btn-info btn-sm">Voltar</a>
+                    </div>
+ 
+            </div>
+        }
+    </div>
+</div>

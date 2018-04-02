@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "scaweb", "scaweb\scaweb.csproj", "{02FF7398-3F8D-4A5A-A615-21B81ADB56FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "scaweb.Tests", "scaweb.Tests\scaweb.Tests.csproj", "{26897A8B-3D37-4A9D-9D78-59FE38415785}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02FF7398-3F8D-4A5A-A615-21B81ADB56FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02FF7398-3F8D-4A5A-A615-21B81ADB56FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02FF7398-3F8D-4A5A-A615-21B81ADB56FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02FF7398-3F8D-4A5A-A615-21B81ADB56FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26897A8B-3D37-4A9D-9D78-59FE38415785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26897A8B-3D37-4A9D-9D78-59FE38415785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26897A8B-3D37-4A9D-9D78-59FE38415785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26897A8B-3D37-4A9D-9D78-59FE38415785}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C71B7D0-2376-486D-9F35-7D4D3E8359A4}
+	EndGlobalSection
+EndGlobal

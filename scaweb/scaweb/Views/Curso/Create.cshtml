@@ -1,0 +1,31 @@
+﻿@model scaweb.Models.Curso
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@Html.ValidationSummary(true)
+<div class="row col-sm-6">
+    <div class="panel panel-info panel-title">
+        <div class="panel-heading">Cadastro do Curso</div>
+        <p></p>
+        @using (Html.BeginForm("Create", "Curso", FormMethod.Post,
+        new { @class = "form-horizontal", @role = "form" })) {
+            <div class="form-group">
+                <label for="IDescricao" class="col-sm-2 control-label"> Descrição </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" placeholder="Descrição"
+                           name="Descricao" id="Descricao">
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="col-md-offset-7">
+                    <div class="btn-group btn-group-sm">
+                        <button type="submit" class="btn btn-info">Salvar</button>
+                        <a href="@Url.Action("Index", "Curso")" class="btn btn-info btn-sm">Voltar</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

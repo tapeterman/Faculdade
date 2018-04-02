@@ -1,0 +1,56 @@
+﻿@model List<scaweb.Models.Instituicao>
+
+@{
+    ViewBag.Title = "Cadastro de Instituição";
+}
+
+<div class="panel panel-info">
+    <div class="panel-heading">Instituições</div>
+    <div class="panel-body">
+        <a href="@Url.Action("Create", "Instituicao")"
+           class="btn btn-default btn-info btn-sm">
+            <span class="glyphicon glyphicon-plus"></span> Novo
+        </a>
+    </div>
+    <table class="table tab-content table-bordered table-hover table-responsive table-striped">
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                Nome
+            </th>
+            <th>Ações</th>
+        </tr>
+        @if (Model != null) {
+            foreach (var item in Model) {
+                <tr>    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            @Html.ActionLink("Editar", "Edit",
+                                 new { id = item.Id },
+                                 new { @class = "btn btn-info btn-sm" })
+
+                            @Html.ActionLink("Visualizar", "Details",
+                                new { id = item.Id },
+                                new { @class = "btn btn-info btn-sm" })
+
+                            @Html.ActionLink("Excluir", "Delete",
+                              new { id = item.Id },
+                               new { @class = "btn btn-info btn-sm" })
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+
+
+

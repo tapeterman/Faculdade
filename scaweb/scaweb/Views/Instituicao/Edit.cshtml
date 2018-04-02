@@ -1,0 +1,31 @@
+﻿@model scaweb.Models.Instituicao
+@{
+    ViewBag.Title = "SCAWEB - Edição de Instituição";
+}
+
+@Html.ValidationSummary(true)
+<div class="row col-sm-5">
+    <div class="panel panel-info panel-title">
+        <div class="panel panel-heading">Edição da Instituição</div>
+        <p></p>
+        @using (Html.BeginForm("Edit", "Instituicao",
+    FormMethod.Post, new { @class = "form-horizontal", @role = "form" })) {
+        <div class="form-group">
+            @Html.Label("CNPJ", new { @class = "col-sm-2 control-label" })
+            @Html.TextBox("Cnpj", Model.Cnpj, new { @class = "form-control col-sm-9", type = "text", required = "true" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Nome", new { @class = "col-sm-2 control-label" })
+            @Html.TextBox("Nome", Model.Nome, new { @class = "form-control col-sm-9 ", type = "text", required = "true" })
+        </div>
+        <div class=" panel-footer">    
+                <div class="btn-group btn-group-sm col-sm-offset-7">
+                    <button type="submit" class="btn btn-info">Salvar</button>
+                    <a href="@Url.Action("Index", "Instituicao")" class="btn btn-info btn-sm">Voltar</a>
+                </div>
+         
+        </div>
+
+    }
+</div>
+</div>

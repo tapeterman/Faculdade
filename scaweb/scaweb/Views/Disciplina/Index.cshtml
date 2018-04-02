@@ -1,0 +1,53 @@
+﻿@model List<scaweb.Models.Disciplina>
+
+@{
+    ViewBag.Title = "Cadastro de Disciplina";
+}
+
+<div class="panel panel-info">
+    <div class="panel-heading">Cursos</div>
+    <div class="panel-body">
+
+    </div>
+    <table class="table">
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th></th>
+        </tr>
+        @if (Model != null) {
+            foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            @Html.ActionLink("Editar", "Edit",
+                                      new { id = item.Id },
+                                      new { @class = "btn btn-default btn-sm" })
+
+                            @Html.ActionLink("Visualizar", "Details",
+                                     new { id = item.Id },
+                                     new { @class = "btn btn-default btn-sm" })
+
+                            @Html.ActionLink("Excluir", "Delete",
+                                   new { id = item.Id },
+                                    new { @class = "btn btn-default btn-sm" })
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+
+
+

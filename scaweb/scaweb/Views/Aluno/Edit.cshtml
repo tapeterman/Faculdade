@@ -1,0 +1,64 @@
+﻿@model scaweb.Models.Aluno
+
+@{
+    ViewBag.Title = "Editar Aluno";
+}
+@Html.ValidationSummary(true)
+<div class="row col-sm-5">
+    <div class="panel panel-info panel-title">
+        <div class="panel panel-heading">Edição de Alunos</div>
+        @using (Html.BeginForm("Edit", "Aluno",
+FormMethod.Post, new { @class = "form-horizontal", @role = "form" })) {
+            <div class="form-group">
+                @Html.Label("Nome", new { @class = "col-sm-4 control-label" })
+                @Html.TextBox("Nome", Model.Nome, new { @class = "form-control col-sm-7", type = "text", required = "true" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Cpf", new { @class = "col-sm-4 control-label" })
+                @Html.TextBox("Cpf", Model.Cpf, new { @class = "form-control col-sm-7", type = "text", required = "true" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Dt Nascimento", new { @class = "col-sm-4 control-label" })
+                @Html.TextBox("DataNascimento", Model.DataNascimento, new { @class = "form-control col-sm-7", type = "text", required = "true" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Email", new { @class = "col-sm-4 control-label" })
+                @Html.TextBox("Email", Model.Email, new { @class = "form-control col-sm-7", type = "text", required = "true" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Endereco", new { @class = "col-sm-4 control-label" })
+                @Html.TextBox("Endereco", Model.Endereco, new { @class = "form-control col-sm-7", type = "text", required = "true" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Telefone", new { @class = "col-sm-4 control-label" })
+                @Html.TextBox("Telefone", Model.Telefone, new { @class = "form-control col-sm-7", type = "text", required = "true" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Identidade", new { @class = "col-sm-4 control-label" })
+                @Html.TextBox("Identidade", Model.Identidade, new { @class = "form-control col-sm-7", type = "text", required = "true" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Matricula", new { @class = "col-sm-4 control-label" })
+                @Html.TextBox("Matricula", Model.Matricula, new { @class = "form-control col-sm-7", type = "text", required = "true" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Ano Inicio", new { @class = "col-sm-4 control-label" })
+                @Html.TextBox("AnoInicio", Model.AnoInicio, new { @class = "form-control col-sm-7", type = "text", required = "true" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Semestre Inicio", new { @class = "col-sm-4 control-label" })
+                @Html.TextBox("SemestreInicio", Model.SemestreInicio, new { @class = "form-control col-sm-7", type = "text", required = "true" })
+            </div>
+
+            <div class=" panel-footer">
+                <div class="btn-group btn-group-sm col-sm-offset-7">
+                    <button type="submit" class="btn btn-info">Salvar</button>
+                    <a href="@Url.Action("Index", "Aluno")" class="btn btn-info btn-sm">Voltar</a>
+                </div>
+
+            </div>
+
+        }
+    </div>
+    <p></p>
+</div>

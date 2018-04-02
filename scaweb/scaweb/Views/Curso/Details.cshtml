@@ -1,0 +1,24 @@
+﻿@model scaweb.Models.Curso
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="row col-sm-4">
+    <div class="panel panel-info panel-title">
+        <div class="panel panel-heading">Informações da Instituição</div>
+        <div class="panel panel-body">
+            <dl class="dl-horizontal">
+                <dt> @Html.DisplayNameFor(model => model.Id)</dt>
+                <dd>@Html.DisplayFor(model => model.Id)</dd>
+                <dt> @Html.DisplayNameFor(model => model.Descricao)</dt>
+                <dd>@Html.DisplayFor(model => model.Descricao)</dd>
+            </dl>
+        </div>
+        <div class=" panel-footer">
+            <div class="btn-group btn-group-sm col-sm-offset-7">
+                <a href="@Url.Action("Edit", new { id = Model.Id })" class="btn btn-info btn-sm">Editar</a>
+                <a href="@Url.Action("Index")" class="btn btn-info btn-sm">Voltar</a>
+            </div>
+        </div>
+    </div>
+</div>

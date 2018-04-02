@@ -1,0 +1,40 @@
+﻿@model scaweb.Models.Instituicao
+@{
+    ViewBag.Title = "SCAWEB - Deleção de Instituição";
+}
+
+
+<div class="row col-sm-6">
+    <div class="panel panel-info panel-title">
+        <div class="panel-heading">Exclusão da Instituição</div>
+        <p></p>
+        @using (Html.BeginForm("Delete", "Instituicao", FormMethod.Post, new { @class = "form-horizontal", @role = "form" })) {
+        <div class="panel panel-body">
+            <div class="form-group">
+                <label for="ICnpj" class="col-sm-2 control-label">CNPJ</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="Cnpj" id="ICnpj" value="@Model.Cnpj" disabled>
+                </div>
+            </div>
+            
+
+            <div class="form-group">
+                <label for="INome" class="col-sm-2 control-label">Nome</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" name="Nome" id="INome" value="@Model.Nome" disabled>
+                </div>
+            </div>
+            
+        </div>
+         
+                <div class=" panel-footer">
+                    <div class="btn-group btn-group-sm col-md-offset-7">
+                        <input type="submit" value="Excluir" class="btn btn-info btn-sm" />
+                        <a href="@Url.Action("Index", "Instituicao")" class="btn btn-info btn-sm">Voltar</a>
+                    </div>
+                </div>
+
+        }
+    </div>
+</div>
+
